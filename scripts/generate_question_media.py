@@ -1,5 +1,8 @@
 from __future__ import annotations
 import json
+import re
+import subprocess
+import tempfile
 from pathlib import Path
 from PIL import Image
 
@@ -130,6 +133,89 @@ def extract_visual_only(cropped: Image.Image) -> Image.Image:
 
     return cropped.crop((x0, y0, x1, y1))
 
+
+def crop_until_question_line(cropped: Image.Image, ordinal: int) -> Image.Image:
+    # OCR the segmented question image and keep only up to the question-number line.
+    with tempfile.NamedTemporaryFile(suffix='.jpg') as tmp:
+        cropped.save(tmp.name, format='JPEG', quality=88, optimize=True)
+        proc = subprocess.run(
+            ['tesseract', tmp.name, 'stdout', '--psm', '6', 'tsv'],
+            capture_output=True,
+            text=True
+        )
+    if proc.returncode != 0 or not proc.stdout:
+        return extract_visual_only(cropped)
+
+    rows = []
+    lines = proc.stdout.splitlines()
+    if not lines:
+        return extract_visual_only(cropped)
+
+    for line in lines[1:]:
+        parts = line.split('\t')
+        if len(parts) < 12:
+            continue
+        try:
+            level = int(parts[0])
+            block = int(parts[2])
+            par = int(parts[3])
+            line_no = int(parts[4])
+            left = int(parts[6])
+            top = int(parts[7])
+            width = int(parts[8])
+            height = int(parts[9])
+            conf = float(parts[10])
+            text = parts[11].strip()
+        except ValueError:
+            continue
+        if level != 5 or not text:
+            continue
+        rows.append({
+            'block': block,
+            'par': par,
+            'line': line_no,
+            'left': left,
+            'top': top,
+            'width': width,
+            'height': height,
+            'conf': conf,
+            'text': text
+        })
+
+    if not rows:
+        return extract_visual_only(cropped)
+
+    ord_s = str(ordinal)
+
+    def normalize_num_prefix(s: str) -> str:
+        s2 = re.sub(r'[^0-9.]', '', s)
+        return s2
+
+    target = None
+    for r in rows:
+        token = normalize_num_prefix(r['text'])
+        if token == f'{ord_s}.' or token == ord_s:
+            target = (r['block'], r['par'], r['line'])
+            break
+        if token.startswith(f'{ord_s}.'):
+            target = (r['block'], r['par'], r['line'])
+            break
+
+    if target is None:
+        return extract_visual_only(cropped)
+
+    line_tokens = [r for r in rows if (r['block'], r['par'], r['line']) == target]
+    if not line_tokens:
+        return extract_visual_only(cropped)
+
+    bottom = max(r['top'] + r['height'] for r in line_tokens)
+    w, h = cropped.size
+    pad = max(12, int(h * 0.04))
+    y1 = min(h, bottom + pad)
+    if y1 <= int(h * 0.12):
+        return extract_visual_only(cropped)
+    return cropped.crop((0, 0, w, y1))
+
 # Group questions by source PDF page.
 page_map: dict[int, list[dict]] = {}
 for q in questions:
@@ -194,7 +280,7 @@ for page_no, qs in page_map.items():
             y0, y1 = 0, h
 
         cropped = img.crop((0, y0, w, y1))
-        visual = extract_visual_only(cropped)
+        visual = crop_until_question_line(cropped, int(q.get('ordinal', 0)))
         out_name = f"q{int(q.get('ordinal', 0)):04d}.jpg"
         out_path = OUT_DIR / out_name
         visual.save(out_path, format='JPEG', quality=82, optimize=True)
