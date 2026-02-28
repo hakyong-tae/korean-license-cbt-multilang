@@ -50,6 +50,19 @@
 ## Run
 Open `index.html` in a browser.
 
+## Analytics (GA4)
+- File: `/index.html`
+- Find `window.KD_ANALYTICS_CONFIG` and replace:
+  - `ga4MeasurementId: "G-XXXXXXXXXX"`
+  - with your real GA4 Measurement ID (example: `G-ABCD1234EF`)
+- Tracked events:
+  - `start_session`
+  - `finish_session`
+  - `apply_settings`
+  - `copy_ai_prompt`
+  - `clear_wrong_note`
+  - `open_page` (type/stats/settings)
+
 ## Mobile support
 - Vertical menu layout (portrait-first)
 - Responsive design for mobile and desktop

@@ -381,6 +381,12 @@ function ui(key) {
   return (UI_COPY[lang] && UI_COPY[lang][key]) || UI_COPY.en[key] || "";
 }
 
+function track(name, params = {}) {
+  if (typeof window.trackEvent === "function") {
+    window.trackEvent(name, params);
+  }
+}
+
 function applyMenuLanguage() {
   el.subtitleText.textContent = ui("subtitle");
   el.homeMenuTitle.textContent = ui("homeMenuTitle");
@@ -583,6 +589,11 @@ function openMock() {
   el.utilityRow.classList.remove("hidden");
   const mins = Number(state.settings.timerMinutes) || 40;
   resetSession(buildMockSet(), "mock", mins * 60);
+  track("start_session", {
+    mode: "mock",
+    question_count: state.questionSet.length,
+    timer_minutes: mins
+  });
   renderSession();
 }
 
@@ -593,6 +604,11 @@ function openWrong() {
   el.utilityRow.classList.remove("hidden");
   const mins = Number(state.settings.wrongTimerMinutes) || 20;
   resetSession(wrongQuestionsSorted(), "wrong", mins * 60);
+  track("start_session", {
+    mode: "wrong",
+    question_count: state.questionSet.length,
+    timer_minutes: mins
+  });
   renderSession();
 }
 
@@ -601,6 +617,7 @@ function openType() {
   el.subtitleText.textContent = "Type-focused study mode";
   setNoActiveTestTimer();
   el.typePanel.classList.remove("hidden");
+  track("open_page", { page: "type" });
   renderTypeFilters();
 }
 
@@ -609,6 +626,7 @@ function openStats() {
   el.subtitleText.textContent = "Learning analytics";
   setNoActiveTestTimer();
   el.statsPanel.classList.remove("hidden");
+  track("open_page", { page: "stats" });
   renderStats();
 }
 
@@ -617,6 +635,7 @@ function openSettings() {
   el.subtitleText.textContent = "App settings";
   setNoActiveTestTimer();
   el.settingsPanel.classList.remove("hidden");
+  track("open_page", { page: "settings" });
   renderSettings();
 }
 
@@ -628,6 +647,12 @@ function startTypeSession() {
   el.sessionPanel.classList.remove("hidden");
   const mins = Number(state.settings.typeTimerMinutes) || 20;
   resetSession(set, "type", mins * 60);
+  track("start_session", {
+    mode: "type",
+    question_count: state.questionSet.length,
+    timer_minutes: mins,
+    selected_types: selected.join(",")
+  });
   renderSession();
 }
 
@@ -858,6 +883,18 @@ function finishSession() {
   state.history = state.history.slice(0, 50);
   saveHistory(state.history);
 
+  track("finish_session", {
+    mode: state.sessionMode,
+    score,
+    total,
+    answered,
+    correct,
+    pass: pass === null ? "na" : (pass ? "pass" : "fail"),
+    question_count: state.questionSet.length,
+    explain_lang: state.settings.explainLang,
+    menu_lang: state.settings.menuLang
+  });
+
   el.resultPanel.classList.remove("hidden");
   el.resultPanel.innerHTML = `
     <h2>${state.sessionMode.toUpperCase()} Result</h2>
@@ -1029,6 +1066,10 @@ async function copyAiPrompt() {
   if (!text) return;
   try {
     await navigator.clipboard.writeText(text);
+    track("copy_ai_prompt", {
+      mode: state.sessionMode,
+      question_ordinal: state.questionSet[state.currentIndex]?.ordinal || 0
+    });
     el.copyAiPromptBtn.textContent = "Copied";
     setTimeout(() => { el.copyAiPromptBtn.textContent = "Copy AI Prompt"; }, 1200);
   } catch {
@@ -1038,6 +1079,7 @@ async function copyAiPrompt() {
 }
 
 function applySettings() {
+  const prev = { ...state.settings };
   state.settings.menuLang = el.menuLangSelect.value;
   state.settings.questionLang = el.questionLangSelect.value;
   state.settings.explainLang = el.explainLangSelect.value;
@@ -1055,6 +1097,18 @@ function applySettings() {
   if (!state.timerId) {
     setNoActiveTestTimer();
   }
+  track("apply_settings", {
+    menu_lang: state.settings.menuLang,
+    question_lang: state.settings.questionLang,
+    explain_lang: state.settings.explainLang,
+    instant_check: state.settings.instantCheck,
+    timer_minutes: state.settings.timerMinutes,
+    wrong_timer_minutes: state.settings.wrongTimerMinutes,
+    type_timer_minutes: state.settings.typeTimerMinutes,
+    changed_menu_lang: prev.menuLang !== state.settings.menuLang ? "1" : "0",
+    changed_question_lang: prev.questionLang !== state.settings.questionLang ? "1" : "0",
+    changed_explain_lang: prev.explainLang !== state.settings.explainLang ? "1" : "0"
+  });
 }
 
 function bindEvents() {
@@ -1067,7 +1121,9 @@ function bindEvents() {
 
   el.startWrongBtn.addEventListener("click", openWrong);
   el.clearWrongBtn.addEventListener("click", () => {
+    const beforeCount = Object.keys(state.wrongNotebook || {}).length;
     clearWrong();
+    track("clear_wrong_note", { count_before: beforeCount });
     renderUtility();
   });
 
