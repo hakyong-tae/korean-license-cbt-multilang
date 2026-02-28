@@ -9,7 +9,9 @@ const EXAM_LANGS = [
 ];
 const MENU_LANGS = [
   { code: "en", label: "English" },
-  { code: "pt", label: "Portuguese" }
+  { code: "pt", label: "Portuguese" },
+  { code: "th", label: "Thai" },
+  { code: "ru", label: "Russian" }
 ];
 
 const UI_COPY = {
@@ -72,6 +74,66 @@ const UI_COPY = {
     videoPendingNote: "Questoes em video: atualizacao em breve.",
     typeVideoPendingNote: "O tipo video esta marcado como atualizacao futura e ainda nao pode ser iniciado.",
     videoTypeLabel: "Video (Em Breve)"
+  },
+  th: {
+    subtitle: "สําหรับชาวต่างชาติในเกาหลีที่เตรียมสอบใบขับขี่ CBT",
+    timerInactive: "ไม่มีการทดสอบที่กำลังทำอยู่",
+    homeMenuTitle: "เมนูหลัก",
+    homeMenuNote: "เว็บไซต์เรียนหลายภาษา สำหรับชาวต่างชาติที่อยู่ในเกาหลี เริ่มจากข้อสอบจำลองหรือฝึกเฉพาะจุดได้",
+    mock: "1. ข้อสอบจำลอง",
+    wrong: "2. สมุดข้อผิดพลาด",
+    type: "3. ฝึกตามประเภท",
+    stats: "4. ความคืบหน้า/สถิติ",
+    settings: "5. ตั้งค่า",
+    back: "กลับไปเมนูหลัก",
+    pageMock: "ข้อสอบจำลอง",
+    pageWrong: "สมุดข้อผิดพลาด",
+    pageType: "ฝึกตามประเภท",
+    pageStats: "ความคืบหน้า/สถิติ",
+    pageSettings: "ตั้งค่า",
+    settingsTitle: "ตั้งค่า",
+    menuLangLabel: "ภาษาเมนู",
+    questionLangLabel: "ภาษาของคำถาม",
+    explainLangLabel: "ภาษาคำอธิบาย",
+    instantCheckLabel: "ตรวจคำตอบทันที",
+    mockTimerLabel: "เวลาข้อสอบจำลองเริ่มต้น (นาที)",
+    wrongTimerLabel: "เวลาสมุดข้อผิดพลาดเริ่มต้น (นาที)",
+    typeTimerLabel: "เวลาฝึกตามประเภทเริ่มต้น (นาที)",
+    applySettings: "บันทึกการตั้งค่า",
+    settingsNote: "โครงสร้าง language pack สามารถขยายได้ และเพิ่มภาษาคำอธิบายใหม่ได้ในรูปแบบเดียวกัน",
+    videoPendingNote: "คำถามวิดีโอ: จะอัปเดตเร็วๆ นี้",
+    typeVideoPendingNote: "หมวดวิดีโอเป็นฟีเจอร์ที่กำลังจะมา และยังไม่สามารถเริ่มได้",
+    videoTypeLabel: "วิดีโอ (เร็วๆ นี้)"
+  },
+  ru: {
+    subtitle: "Для иностранцев в Корее, готовящихся к CBT по водительским правам",
+    timerInactive: "Нет активного теста",
+    homeMenuTitle: "Главное меню",
+    homeMenuNote: "Многоязычный учебный сайт для иностранцев в Корее. Начните с пробного теста или целевой практики.",
+    mock: "1. Пробный тест",
+    wrong: "2. Тетрадь ошибок",
+    type: "3. Практика по типам",
+    stats: "4. Прогресс/Статистика",
+    settings: "5. Настройки",
+    back: "Назад в меню",
+    pageMock: "Пробный тест",
+    pageWrong: "Тетрадь ошибок",
+    pageType: "Практика по типам",
+    pageStats: "Прогресс/Статистика",
+    pageSettings: "Настройки",
+    settingsTitle: "Настройки",
+    menuLangLabel: "Язык меню",
+    questionLangLabel: "Язык вопросов",
+    explainLangLabel: "Язык объяснений",
+    instantCheckLabel: "Мгновенная проверка",
+    mockTimerLabel: "Таймер пробного теста по умолчанию (мин.)",
+    wrongTimerLabel: "Таймер тетради ошибок по умолчанию (мин.)",
+    typeTimerLabel: "Таймер практики по типам по умолчанию (мин.)",
+    applySettings: "Применить настройки",
+    settingsNote: "Архитектура language-pack расширяема. Позже можно добавить новые языки объяснений по той же схеме.",
+    videoPendingNote: "Видеовопросы: обновление скоро.",
+    typeVideoPendingNote: "Тип 'видео' отмечен как скоро и пока недоступен.",
+    videoTypeLabel: "Видео (Скоро)"
   }
 };
 
