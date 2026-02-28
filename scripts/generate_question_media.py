@@ -7,25 +7,36 @@ ROOT = Path('/Users/hytae/Downloads/verse8-driving-cbt')
 DB_PATH = ROOT / 'data' / 'questions.v1.json'
 PAGE_DIR = ROOT / 'data' / 'page_media'
 OUT_DIR = ROOT / 'data' / 'question_media'
+CACHE_BUSTER = 'v2'
 
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 db = json.loads(DB_PATH.read_text(encoding='utf-8'))
 questions = db.get('questions', [])
 
-# Group questions by source page image.
+# Group questions by source PDF page.
 page_map: dict[int, list[dict]] = {}
 for q in questions:
-    media = q.get('media')
-    if not media or not media.get('src'):
+    q_type = q.get('type')
+    has_media = isinstance(q.get('media'), dict)
+    if q_type not in {'sign', 'photo', 'illustration'} and not has_media:
         continue
-    src = media['src']
-    name = Path(src).name
-    if not name.startswith('p') or not name.endswith('.jpg'):
-        continue
-    try:
-        page_no = int(name[1:-4])
-    except ValueError:
+
+    page_no = None
+    source_page = q.get('source', {}).get('page')
+    if isinstance(source_page, int):
+        page_no = source_page
+    else:
+        media = q.get('media')
+        if media and media.get('src'):
+            src = media['src']
+            name = Path(src).name
+            if name.startswith('p') and name.endswith('.jpg'):
+                try:
+                    page_no = int(name[1:-4])
+                except ValueError:
+                    page_no = None
+    if not page_no:
         continue
     page_map.setdefault(page_no, []).append(q)
 
@@ -39,20 +50,20 @@ for page_no, qs in page_map.items():
     w, h = img.size
     n = len(qs)
 
-    # Vertical segmentation with slight overlap to avoid cut lines.
+    # Vertical segmentation without overlap to avoid duplicated neighboring questions.
     if n <= 1:
         bounds = [(0.0, 1.0)]
     elif n == 2:
-        bounds = [(0.0, 0.53), (0.47, 1.0)]
+        bounds = [(0.0, 0.5), (0.5, 1.0)]
     elif n == 3:
-        bounds = [(0.0, 0.355), (0.322, 0.688), (0.655, 1.0)]
+        bounds = [(0.0, 1.0 / 3.0), (1.0 / 3.0, 2.0 / 3.0), (2.0 / 3.0, 1.0)]
     else:
         # Rare fallback: even split.
         step = 1.0 / n
         bounds = []
         for i in range(n):
-            y0 = max(0.0, i * step - 0.01)
-            y1 = min(1.0, (i + 1) * step + 0.01)
+            y0 = i * step
+            y1 = (i + 1) * step
             bounds.append((y0, y1))
 
     for idx, q in enumerate(qs):
@@ -67,7 +78,10 @@ for page_no, qs in page_map.items():
         out_path = OUT_DIR / out_name
         cropped.save(out_path, format='JPEG', quality=78, optimize=True)
 
-        q['media']['src'] = f'./data/question_media/{out_name}'
+        if not isinstance(q.get('media'), dict):
+            q['media'] = {'type': 'image'}
+        q['media']['type'] = 'image'
+        q['media']['src'] = f'./data/question_media/{out_name}?{CACHE_BUSTER}'
         q['media']['alt'] = f"Question {q.get('ordinal')} image"
 
 DB_PATH.write_text(json.dumps(db, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
