@@ -11,7 +11,8 @@ const MENU_LANGS = [
   { code: "en", label: "English" },
   { code: "pt", label: "Portuguese" },
   { code: "th", label: "Thai" },
-  { code: "ru", label: "Russian" }
+  { code: "ru", label: "Russian" },
+  { code: "ja", label: "Japanese" }
 ];
 
 const UI_COPY = {
@@ -134,10 +135,40 @@ const UI_COPY = {
     videoPendingNote: "Видеовопросы: обновление скоро.",
     typeVideoPendingNote: "Тип 'видео' отмечен как скоро и пока недоступен.",
     videoTypeLabel: "Видео (Скоро)"
+  },
+  ja: {
+    subtitle: "韓国で運転免許 CBT を準備する外国人向け",
+    timerInactive: "実行中のテストはありません",
+    homeMenuTitle: "メインメニュー",
+    homeMenuNote: "韓国在住の外国人向け多言語学習サイト。模擬試験または重点練習から始められます。",
+    mock: "1. 模擬試験",
+    wrong: "2. 間違いノート",
+    type: "3. タイプ別練習",
+    stats: "4. 進捗/統計",
+    settings: "5. 設定",
+    back: "メニューに戻る",
+    pageMock: "模擬試験",
+    pageWrong: "間違いノート",
+    pageType: "タイプ別練習",
+    pageStats: "進捗/統計",
+    pageSettings: "設定",
+    settingsTitle: "設定",
+    menuLangLabel: "メニュー言語",
+    questionLangLabel: "問題言語",
+    explainLangLabel: "解説言語",
+    instantCheckLabel: "即時採点",
+    mockTimerLabel: "模擬試験の初期タイマー（分）",
+    wrongTimerLabel: "間違いノートの初期タイマー（分）",
+    typeTimerLabel: "タイプ別練習の初期タイマー（分）",
+    applySettings: "設定を適用",
+    settingsNote: "Language-pack 構造は拡張可能です。同じスキーマで解説言語を追加できます。",
+    videoPendingNote: "動画問題: 近日アップデート予定。",
+    typeVideoPendingNote: "動画タイプは近日対応予定で、現在は開始できません。",
+    videoTypeLabel: "動画（近日対応）"
   }
 };
 
-const EXPLAIN_LANG_FALLBACK = ["pt", "en", "ko", "zh", "vi"];
+const EXPLAIN_LANG_FALLBACK = ["pt", "en", "ja", "ru", "th", "ko", "zh", "vi"];
 
 const STORAGE = {
   WRONG: "v8_wrong_notebook",
