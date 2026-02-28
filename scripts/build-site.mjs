@@ -1,8 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
+import { execFileSync } from "node:child_process";
 
 const root = "/Users/hytae/Downloads/verse8-driving-cbt";
 const outDir = path.join(root, "site");
+
+execFileSync("node", [path.join(root, "scripts", "build-questions-js.mjs")], { stdio: "inherit" });
+execFileSync("node", [path.join(root, "scripts", "build-explanations-bundles.mjs")], { stdio: "inherit" });
 
 const filesToCopy = [
   "index.html",
@@ -16,7 +20,8 @@ const filesToCopy = [
 
 const dirsToCopy = [
   "assets",
-  "data/question_media"
+  "data/question_media",
+  "data/explanations"
 ];
 
 fs.rmSync(outDir, { recursive: true, force: true });

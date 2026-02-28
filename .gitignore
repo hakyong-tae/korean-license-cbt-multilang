@@ -2,3 +2,6 @@
 node_modules/
 *.log
 data/question-bank-en.pdf
+site/
+data/questions.explain.en.json
+data/questions.explain.pt.json

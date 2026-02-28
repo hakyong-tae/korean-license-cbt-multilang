@@ -7,6 +7,13 @@ const EXAM_LANGS = [
   { code: "zh", label: "Chinese" },
   { code: "vi", label: "Vietnamese" }
 ];
+const EXPLAIN_LANGS = [
+  { code: "en", label: "EN" },
+  { code: "pt", label: "PT" },
+  { code: "th", label: "TH" },
+  { code: "ru", label: "RU" },
+  { code: "ja", label: "JA" }
+];
 const MENU_LANGS = [
   { code: "en", label: "English" },
   { code: "pt", label: "Portuguese" },
@@ -168,7 +175,7 @@ const UI_COPY = {
   }
 };
 
-const EXPLAIN_LANG_FALLBACK = ["pt", "en", "ja", "ru", "th", "ko", "zh", "vi"];
+const EXPLAIN_LANG_FALLBACK = ["en", "pt", "ja", "ru", "th"];
 
 const STORAGE = {
   WRONG: "v8_wrong_notebook",
@@ -291,7 +298,9 @@ const state = {
   wrongNotebook: loadWrongNotebook(),
   history: loadHistory(),
   settings: loadSettings(),
-  showExplanation: true
+  showExplanation: true,
+  explainStore: {},
+  explainLoadPromises: {}
 };
 
 const el = {
@@ -426,14 +435,43 @@ function getLocalizedText(map, lang) {
 }
 
 function getExplainText(q) {
-  const lang = state.settings.explainLang;
-  const exp = q.explanations || {};
-  if (exp[lang]) return exp[lang];
-  for (const code of EXPLAIN_LANG_FALLBACK) {
-    if (exp[code]) return exp[code];
+  const ordered = [state.settings.explainLang, ...EXPLAIN_LANG_FALLBACK]
+    .filter((code, idx, arr) => code && arr.indexOf(code) === idx);
+  for (const code of ordered) {
+    const text = state.explainStore[code]?.[q.id];
+    if (text) return text;
+    if (!state.explainStore[code]) {
+      ensureExplainLangLoaded(code);
+    }
   }
-  const first = Object.keys(exp)[0];
-  return first ? exp[first] : "";
+  return "";
+}
+
+async function ensureExplainLangLoaded(lang) {
+  if (!lang) return false;
+  if (state.explainStore[lang]) return true;
+  if (state.explainLoadPromises[lang]) return state.explainLoadPromises[lang];
+
+  const p = fetch(`./data/explanations/${encodeURIComponent(lang)}.json`, { cache: "force-cache" })
+    .then((res) => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json();
+    })
+    .then((payload) => {
+      state.explainStore[lang] = payload.items || {};
+      return true;
+    })
+    .catch(() => false)
+    .finally(() => {
+      delete state.explainLoadPromises[lang];
+    });
+
+  state.explainLoadPromises[lang] = p;
+  p.then((ok) => {
+    if (!ok) return;
+    if (state.page !== "home") renderSession();
+  });
+  return p;
 }
 
 function choicesForQuestion(q) {
@@ -989,21 +1027,15 @@ function renderSettings() {
   el.menuLangSelect.innerHTML = MENU_LANGS.map((l) => `<option value="${l.code}">${l.label}</option>`).join("");
   el.questionLangSelect.innerHTML = EXAM_LANGS.map((l) => `<option value="${l.code}">${l.label}</option>`).join("");
 
-  const explainCodes = new Set();
-  BANK.forEach((q) => {
-    Object.keys(q.explanations || {}).forEach((k) => explainCodes.add(k));
-  });
-  if (!explainCodes.size) explainCodes.add("pt");
-
-  el.explainLangSelect.innerHTML = Array.from(explainCodes)
-    .map((code) => `<option value="${code}">${code.toUpperCase()}</option>`)
+  el.explainLangSelect.innerHTML = EXPLAIN_LANGS
+    .map(({ code, label }) => `<option value="${code}">${label}</option>`)
     .join("");
 
   if (MENU_LANGS.some((l) => l.code === state.settings.menuLang)) {
     el.menuLangSelect.value = state.settings.menuLang;
   }
   el.questionLangSelect.value = state.settings.questionLang;
-  if (explainCodes.has(state.settings.explainLang)) {
+  if (EXPLAIN_LANGS.some((l) => l.code === state.settings.explainLang)) {
     el.explainLangSelect.value = state.settings.explainLang;
   }
   el.instantCheckSelect.value = state.settings.instantCheck;
@@ -1097,6 +1129,9 @@ function applySettings() {
   if (!state.timerId) {
     setNoActiveTestTimer();
   }
+  if (prev.explainLang !== state.settings.explainLang) {
+    ensureExplainLangLoaded(state.settings.explainLang);
+  }
   track("apply_settings", {
     menu_lang: state.settings.menuLang,
     question_lang: state.settings.questionLang,
@@ -1157,6 +1192,7 @@ function bindEvents() {
 bindEvents();
 renderUtility();
 renderStats();
+ensureExplainLangLoaded(state.settings.explainLang);
 applyMenuLanguage();
 setNoActiveTestTimer();
 showHome();

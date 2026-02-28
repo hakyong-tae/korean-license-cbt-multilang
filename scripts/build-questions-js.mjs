@@ -10,8 +10,13 @@ if (!Array.isArray(db.questions)) {
   throw new Error('Invalid schema: questions array missing');
 }
 
-const out = `window.CBT_QUESTIONS = ${JSON.stringify(db.questions, null, 2)};\n`;
+const slimQuestions = db.questions.map((q) => {
+  const { explanations, ...rest } = q;
+  return rest;
+});
+
+const out = `window.CBT_QUESTIONS = ${JSON.stringify(slimQuestions, null, 2)};\n`;
 fs.writeFileSync(outPath, out);
 
 console.log(`Generated questions.js from ${jsonPath}`);
-console.log(`Question count: ${db.questions.length}`);
+console.log(`Question count: ${slimQuestions.length}`);
