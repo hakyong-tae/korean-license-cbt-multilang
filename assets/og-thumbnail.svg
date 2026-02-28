@@ -1,0 +1,21 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B4DBA"/>
+      <stop offset="1" stop-color="#1E79D8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="76" y="76" width="160" height="160" rx="32" fill="#EAF2FF"/>
+  <rect x="90" y="96" width="48" height="48" rx="8" fill="#BFD5FF"/>
+  <rect x="146" y="100" width="74" height="10" rx="5" fill="#7EA6F8"/>
+  <rect x="146" y="118" width="62" height="8" rx="4" fill="#9CB8F5"/>
+  <rect x="90" y="150" width="130" height="8" rx="4" fill="#9CB8F5"/>
+  <circle cx="156" cy="196" r="28" fill="#0A3D96"/>
+  <circle cx="156" cy="196" r="15" fill="#EAF2FF"/>
+  <text x="280" y="186" fill="white" font-family="Arial, sans-serif" font-size="64" font-weight="700">Korea Driver License CBT</text>
+  <text x="280" y="258" fill="#EAF2FF" font-family="Arial, sans-serif" font-size="36" font-weight="500">For foreigners in Korea preparing for the license exam</text>
+  <text x="280" y="318" fill="#EAF2FF" font-family="Arial, sans-serif" font-size="32" font-weight="500">다국어 모의시험 · 오답노트 · 유형별 학습</text>
+  <rect x="280" y="372" width="420" height="70" rx="18" fill="#EAF2FF"/>
+  <text x="312" y="418" fill="#0B4DBA" font-family="Arial, sans-serif" font-size="34" font-weight="700">ko-drive.netlify.app</text>
+</svg>

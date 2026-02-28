@@ -14,10 +14,10 @@ const MENU_LANGS = [
 
 const UI_COPY = {
   en: {
-    subtitle: "Mobile portrait-first study app",
+    subtitle: "For foreigners in Korea preparing for the driver license CBT",
     timerInactive: "No Active Test",
     homeMenuTitle: "Main Menu",
-    homeMenuNote: "Choose one mode to enter. Designed for mobile portrait orientation.",
+    homeMenuNote: "Multilingual study site for foreigners living in Korea. Start with mock test or focused practice.",
     mock: "1. Mock Test",
     wrong: "2. Wrong Note",
     type: "3. Type Practice",
@@ -44,10 +44,10 @@ const UI_COPY = {
     videoTypeLabel: "Video (Coming Soon)"
   },
   pt: {
-    subtitle: "App de estudo otimizado para modo retrato no celular",
+    subtitle: "Para estrangeiros na Coreia que se preparam para o teste CBT de habilitacao",
     timerInactive: "Sem teste ativo",
     homeMenuTitle: "Menu Principal",
-    homeMenuNote: "Escolha um modo para entrar. Estrutura otimizada para retrato no celular.",
+    homeMenuNote: "Site multilingue para estrangeiros na Coreia. Comece com simulado ou pratica focada.",
     mock: "1. Simulado",
     wrong: "2. Caderno de Erros",
     type: "3. Pratica por Tipo",

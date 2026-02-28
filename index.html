@@ -3,15 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="한국 거주 외국인을 위한 한국 운전면허 필기시험(CBT) 준비 사이트. 영어/한국어 등 다국어 학습과 모의시험을 지원합니다." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Korea Driver License CBT | 한국 운전면허 필기 준비" />
+  <meta property="og:description" content="한국 거주 외국인을 위한 운전면허 필기(CBT) 학습 사이트. 다국어로 모의시험과 오답학습을 지원합니다." />
+  <meta property="og:url" content="https://ko-drive.netlify.app/" />
+  <meta property="og:image" content="https://ko-drive.netlify.app/assets/og-thumbnail.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Korea Driver License CBT" />
+  <meta name="twitter:description" content="한국 거주 외국인을 위한 한국 운전면허 필기시험(CBT) 준비 사이트" />
+  <meta name="twitter:image" content="https://ko-drive.netlify.app/assets/og-thumbnail.svg" />
+  <link rel="icon" type="image/svg+xml" href="/assets/license-logo.svg" />
   <title>Korea Driver License CBT</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <div class="app-shell">
     <header class="topbar">
-      <div>
+      <div class="brand-wrap">
+        <img class="brand-logo" src="./assets/license-logo.svg" alt="Driver license logo" />
+        <div>
         <h1>Korea Driver License CBT</h1>
         <p class="subtitle" id="subtitleText">Mobile portrait-first study app</p>
+        </div>
       </div>
       <div class="timer" id="timer">40:00</div>
     </header>
@@ -19,6 +33,9 @@
     <section id="homeMenuPanel" class="home-menu panel-block">
       <h2 id="homeMenuTitle">Main Menu</h2>
       <p id="homeMenuNote" class="home-note">Choose one mode to enter. Designed for mobile portrait orientation.</p>
+      <p class="home-note home-note-strong">
+        한국 거주 외국인을 위한 한국 운전면허 필기시험(CBT) 학습 사이트
+      </p>
       <div class="home-menu-list">
         <button id="openMockBtn" class="home-btn" type="button">1. Mock Test</button>
         <button id="openWrongBtn" class="home-btn" type="button">2. Wrong Note</button>

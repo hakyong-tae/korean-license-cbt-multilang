@@ -32,6 +32,16 @@ body {
   gap: 12px;
   align-items: center;
 }
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand-logo {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+}
 h1 { margin: 0; font-size: 2rem; }
 .subtitle { margin: 6px 0 0; color: var(--muted); font-size: 0.92rem; }
 .timer { font-size: 1.4rem; font-weight: 700; color: var(--primary); font-variant-numeric: tabular-nums; }
@@ -48,6 +58,15 @@ h1 { margin: 0; font-size: 2rem; }
 }
 .home-menu h2 { margin: 0; }
 .home-note { margin: 8px 0 12px; color: var(--muted); }
+.home-note-strong {
+  margin-top: 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #eef4ff;
+  border: 1px solid #d5e2ff;
+  color: #1e3a8a;
+  font-weight: 600;
+}
 .home-menu-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -336,6 +355,7 @@ h1 { margin: 0; font-size: 2rem; }
 
 @media (max-width: 980px) {
   h1 { font-size: 1.8rem; }
+  .brand-logo { width: 42px; height: 42px; }
   .utility-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .status-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .main-grid { grid-template-columns: 1fr; }
@@ -347,6 +367,8 @@ h1 { margin: 0; font-size: 2rem; }
 @media (max-width: 680px) {
   .app-shell { padding: 12px; }
   h1 { font-size: 1.5rem; }
+  .brand-wrap { gap: 8px; }
+  .brand-logo { width: 36px; height: 36px; }
   .timer { font-size: 1.2rem; }
   .site-footer { padding: 0 12px; margin: 12px auto 18px; }
   .footer-main { font-size: 0.9rem; line-height: 1.45; }
