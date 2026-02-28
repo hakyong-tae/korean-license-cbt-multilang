@@ -14,12 +14,36 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 db = json.loads(DB_PATH.read_text(encoding='utf-8'))
 questions = db.get('questions', [])
 
+
+def needs_visual_media(q: dict) -> bool:
+    prompt = (q.get('prompt', {}).get('en') or '').lower()
+    q_type = q.get('type')
+    if q_type not in {'sign', 'photo', 'illustration'}:
+        return False
+    visual_cues = (
+        'following',
+        'in the photo',
+        'this photo',
+        'given situation',
+        'in the given situation',
+        'pictured',
+        'shown',
+        'below',
+        'image',
+        'figure'
+    )
+    return any(cue in prompt for cue in visual_cues)
+
 # Group questions by source PDF page.
 page_map: dict[int, list[dict]] = {}
 for q in questions:
     q_type = q.get('type')
     has_media = isinstance(q.get('media'), dict)
     if q_type not in {'sign', 'photo', 'illustration'} and not has_media:
+        continue
+    if not needs_visual_media(q):
+        if 'media' in q:
+            del q['media']
         continue
 
     page_no = None
@@ -83,6 +107,20 @@ for page_no, qs in page_map.items():
         q['media']['type'] = 'image'
         q['media']['src'] = f'./data/question_media/{out_name}?{CACHE_BUSTER}'
         q['media']['alt'] = f"Question {q.get('ordinal')} image"
+
+# Cleanup orphaned cropped images that are no longer referenced.
+used_files = set()
+for q in questions:
+    src = (q.get('media') or {}).get('src') or ''
+    if not src:
+        continue
+    file_name = Path(src.split('?', 1)[0]).name
+    if file_name:
+        used_files.add(file_name)
+
+for p in OUT_DIR.glob('q*.jpg'):
+    if p.name not in used_files:
+        p.unlink(missing_ok=True)
 
 DB_PATH.write_text(json.dumps(db, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 print(f'Updated media paths in {DB_PATH}')

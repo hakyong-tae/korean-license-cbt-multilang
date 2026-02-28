@@ -7042,11 +7042,6 @@ window.CBT_QUESTIONS = [
       "editionDate": "2025-02-24",
       "page": 37,
       "note": "Extracted from 1,2 ordinary written test question bank English PDF"
-    },
-    "media": {
-      "type": "image",
-      "src": "./data/question_media/q0180.jpg?v2",
-      "alt": "Question 180 image"
     }
   },
   {
@@ -14288,11 +14283,6 @@ window.CBT_QUESTIONS = [
       "editionDate": "2025-02-24",
       "page": 75,
       "note": "Extracted from 1,2 ordinary written test question bank English PDF"
-    },
-    "media": {
-      "type": "image",
-      "src": "./data/question_media/q0365.jpg?v2",
-      "alt": "Question 365 image"
     }
   },
   {
