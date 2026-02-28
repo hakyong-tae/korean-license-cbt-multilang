@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import path from 'node:path';
+
+const root = '/Users/hytae/Downloads/verse8-driving-cbt';
+const jsonPath = path.join(root, 'data', 'questions.v1.json');
+const outPath = path.join(root, 'questions.js');
+
+const db = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+if (!Array.isArray(db.questions)) {
+  throw new Error('Invalid schema: questions array missing');
+}
+
+const out = `window.CBT_QUESTIONS = ${JSON.stringify(db.questions, null, 2)};\n`;
+fs.writeFileSync(outPath, out);
+
+console.log(`Generated questions.js from ${jsonPath}`);
+console.log(`Question count: ${db.questions.length}`);

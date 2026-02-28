@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Korea Driver License CBT</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <h1>Korea Driver License CBT</h1>
+        <p class="subtitle" id="subtitleText">Mobile portrait-first study app</p>
+      </div>
+      <div class="timer" id="timer">40:00</div>
+    </header>
+
+    <section id="homeMenuPanel" class="home-menu panel-block">
+      <h2 id="homeMenuTitle">Main Menu</h2>
+      <p id="homeMenuNote" class="home-note">Choose one mode to enter. Designed for mobile portrait orientation.</p>
+      <div class="home-menu-list">
+        <button id="openMockBtn" class="home-btn" type="button">1. Mock Test</button>
+        <button id="openWrongBtn" class="home-btn" type="button">2. Wrong Note</button>
+        <button id="openTypeBtn" class="home-btn" type="button">3. Type Practice</button>
+        <button id="openStatsBtn" class="home-btn" type="button">4. Progress/Stats</button>
+        <button id="openSettingsBtn" class="home-btn" type="button">5. Settings</button>
+      </div>
+    </section>
+
+    <section id="contentShell" class="panel-block hidden">
+      <div class="content-nav">
+        <button id="backToMenuBtn" class="btn secondary" type="button">Back to Menu</button>
+        <strong id="pageTitle">Page</strong>
+      </div>
+
+      <section class="utility-row hidden" id="utilityRow">
+        <div class="utility-card"><span>Recent Score</span><strong id="recentScoreLabel">-</strong></div>
+        <div class="utility-card"><span>Wrong Note Count</span><strong id="notebookCountLabel">0</strong></div>
+        <div class="utility-card"><span>Weak Area</span><strong id="weakTypeLabel">-</strong></div>
+        <div class="utility-actions">
+          <button id="startWrongBtn" class="btn secondary" type="button">Start Wrong Note Session</button>
+          <button id="clearWrongBtn" class="btn secondary danger" type="button">Clear Wrong Note</button>
+        </div>
+      </section>
+
+      <section id="sessionPanel" class="panel-block hidden">
+        <section class="status-row">
+          <div class="status-card"><span>Question</span><strong id="currentQuestionLabel">1 / 40</strong></div>
+          <div class="status-card"><span>Answered</span><strong id="answeredLabel">0</strong></div>
+          <div class="status-card"><span>Correct</span><strong id="correctLabel">0</strong></div>
+          <div class="status-card"><span>Score</span><strong id="scoreLabel">0 / 100</strong></div>
+        </section>
+
+        <section class="exam-spec" id="examSpec">
+          <strong>Official ratio:</strong>
+          <span>Text(21), Illustration(6), Photo(7), Sign(5), Video(1)</span>
+          <span>|</span>
+          <span>1-answer: 2 pts, 2-answer: 3 pts, video item: 5 pts</span>
+          <span id="videoPendingNote">Video questions: Coming soon update</span>
+        </section>
+
+        <main class="main-grid">
+          <aside class="palette-panel">
+            <h2 id="paletteTitle">Question Palette</h2>
+            <div id="palette" class="palette-grid"></div>
+            <button id="finishBtn" class="btn finish">Finish Session</button>
+          </aside>
+
+          <section class="question-panel">
+            <div class="q-meta">
+              <span id="categoryChip" class="chip">Text</span>
+              <span id="ruleChip" class="chip muted">4 choices / 1 answer</span>
+              <label class="switch-wrap">
+                <input id="explainToggle" type="checkbox" checked />
+                <span>Show explanation</span>
+              </label>
+            </div>
+
+            <h2 id="questionText" class="question-text"></h2>
+            <div id="mediaBox" class="media-box hidden"></div>
+            <div id="options" class="options"></div>
+            <div id="feedback" class="feedback hidden"></div>
+
+            <div class="ai-box">
+              <strong>AI Help</strong>
+              <span>Use your own ChatGPT/Gemini for deeper explanation</span>
+              <div class="ai-actions">
+                <button id="copyAiPromptBtn" class="btn secondary" type="button">Copy AI Prompt</button>
+                <a class="btn secondary" href="https://chatgpt.com" target="_blank" rel="noreferrer">Open ChatGPT</a>
+                <a class="btn secondary" href="https://gemini.google.com" target="_blank" rel="noreferrer">Open Gemini</a>
+                <a class="btn secondary" href="https://claude.ai" target="_blank" rel="noreferrer">Open Claude</a>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button id="prevBtn" class="btn secondary">Previous</button>
+              <button id="checkBtn" class="btn secondary">Check Answer</button>
+              <button id="nextBtn" class="btn primary">Next</button>
+            </div>
+          </section>
+        </main>
+
+        <section id="resultPanel" class="result-panel hidden"></section>
+      </section>
+
+      <section id="typePanel" class="panel-block hidden">
+        <div class="subpanel">
+          <h2>Type Practice</h2>
+          <p>Select specific item types for focused short practice.</p>
+          <p id="typeVideoPendingNote" class="pending-note">Video type is marked as coming soon and cannot be started yet.</p>
+          <div id="typeFilters" class="type-filters"></div>
+          <button id="startTypeBtn" class="btn primary" type="button">Start Selected Type Practice</button>
+        </div>
+      </section>
+
+      <section id="statsPanel" class="panel-block hidden">
+        <div class="subpanel">
+          <h2>Progress/Stats</h2>
+          <div class="stats-grid">
+            <div class="utility-card"><span>Total Sessions</span><strong id="statSessionCount">0</strong></div>
+            <div class="utility-card"><span>Average Score</span><strong id="statAvgScore">0</strong></div>
+            <div class="utility-card"><span>Best Score</span><strong id="statBestScore">0</strong></div>
+            <div class="utility-card"><span>Latest Mock Score</span><strong id="statLastMock">-</strong></div>
+          </div>
+          <h3>Recent History</h3>
+          <div id="historyList" class="history-list"></div>
+        </div>
+      </section>
+
+      <section id="settingsPanel" class="panel-block hidden">
+        <div class="subpanel">
+          <h2 id="settingsTitle">Settings</h2>
+          <div class="settings-grid">
+            <label>
+              <span id="menuLangLabel">Menu Language</span>
+              <select id="menuLangSelect"></select>
+            </label>
+            <label>
+              <span id="questionLangLabel">Question Language</span>
+              <select id="questionLangSelect"></select>
+            </label>
+            <label>
+              <span id="explainLangLabel">Explanation Language</span>
+              <select id="explainLangSelect"></select>
+            </label>
+            <label>
+              <span id="instantCheckLabel">Instant Check</span>
+              <select id="instantCheckSelect">
+                <option value="on">ON</option>
+                <option value="off">OFF</option>
+              </select>
+            </label>
+            <label>
+              <span id="mockTimerLabel">Default Mock Timer (minutes)</span>
+              <input id="timerMinutesInput" type="number" min="5" max="120" value="40" />
+            </label>
+            <label>
+              <span id="wrongTimerLabel">Default Wrong Note Timer (minutes)</span>
+              <input id="wrongTimerMinutesInput" type="number" min="5" max="120" value="20" />
+            </label>
+            <label>
+              <span id="typeTimerLabel">Default Type Practice Timer (minutes)</span>
+              <input id="typeTimerMinutesInput" type="number" min="5" max="120" value="20" />
+            </label>
+          </div>
+          <button id="applySettingsBtn" class="btn primary" type="button">Apply Settings</button>
+          <p id="settingsNote" class="settings-note">Language-pack architecture is extensible. Add explanation languages later with the same schema.</p>
+        </div>
+      </section>
+    </section>
+  </div>
+
+  <script src="./questions.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
