@@ -48,6 +48,7 @@ const UI_COPY = {
     wrongTimerLabel: "Default Wrong Note Timer (minutes)",
     typeTimerLabel: "Default Type Practice Timer (minutes)",
     applySettings: "Apply Settings",
+    firstVisitGuide: "First visit detected. Please set your preferred language and options before starting.",
     settingsNote: "Language-pack architecture is extensible. Add explanation languages later with the same schema.",
     videoPendingNote: "Video questions: coming soon update.",
     typeVideoPendingNote: "Video type is marked as coming soon and cannot be started yet.",
@@ -78,6 +79,7 @@ const UI_COPY = {
     wrongTimerLabel: "Tempo padrao do Caderno de Erros (minutos)",
     typeTimerLabel: "Tempo padrao da Pratica por Tipo (minutos)",
     applySettings: "Aplicar Configuracoes",
+    firstVisitGuide: "Primeira visita detectada. Defina idioma e opcoes antes de iniciar.",
     settingsNote: "A arquitetura de pacote de idiomas e expansivel. Voce pode adicionar novos idiomas de explicacao depois com o mesmo esquema.",
     videoPendingNote: "Questoes em video: atualizacao em breve.",
     typeVideoPendingNote: "O tipo video esta marcado como atualizacao futura e ainda nao pode ser iniciado.",
@@ -108,6 +110,7 @@ const UI_COPY = {
     wrongTimerLabel: "เวลาสมุดข้อผิดพลาดเริ่มต้น (นาที)",
     typeTimerLabel: "เวลาฝึกตามประเภทเริ่มต้น (นาที)",
     applySettings: "บันทึกการตั้งค่า",
+    firstVisitGuide: "ตรวจพบว่าเป็นการใช้งานครั้งแรก กรุณาตั้งค่าภาษาและตัวเลือกก่อนเริ่มใช้งาน",
     settingsNote: "โครงสร้าง language pack สามารถขยายได้ และเพิ่มภาษาคำอธิบายใหม่ได้ในรูปแบบเดียวกัน",
     videoPendingNote: "คำถามวิดีโอ: จะอัปเดตเร็วๆ นี้",
     typeVideoPendingNote: "หมวดวิดีโอเป็นฟีเจอร์ที่กำลังจะมา และยังไม่สามารถเริ่มได้",
@@ -138,6 +141,7 @@ const UI_COPY = {
     wrongTimerLabel: "Таймер тетради ошибок по умолчанию (мин.)",
     typeTimerLabel: "Таймер практики по типам по умолчанию (мин.)",
     applySettings: "Применить настройки",
+    firstVisitGuide: "Обнаружен первый визит. Перед началом выберите язык и основные настройки.",
     settingsNote: "Архитектура language-pack расширяема. Позже можно добавить новые языки объяснений по той же схеме.",
     videoPendingNote: "Видеовопросы: обновление скоро.",
     typeVideoPendingNote: "Тип 'видео' отмечен как скоро и пока недоступен.",
@@ -168,6 +172,7 @@ const UI_COPY = {
     wrongTimerLabel: "間違いノートの初期タイマー（分）",
     typeTimerLabel: "タイプ別練習の初期タイマー（分）",
     applySettings: "設定を適用",
+    firstVisitGuide: "初回アクセスです。開始前に言語と基本設定を選択してください。",
     settingsNote: "Language-pack 構造は拡張可能です。同じスキーマで解説言語を追加できます。",
     videoPendingNote: "動画問題: 近日アップデート予定。",
     typeVideoPendingNote: "動画タイプは近日対応予定で、現在は開始できません。",
@@ -222,6 +227,10 @@ function loadSettings() {
 
 function saveSettings(settings) {
   localStorage.setItem(STORAGE.SETTINGS, JSON.stringify(settings));
+}
+
+function hasSavedSettings() {
+  return !!localStorage.getItem(STORAGE.SETTINGS);
 }
 
 function loadWrongNotebook() {
@@ -298,6 +307,7 @@ const state = {
   wrongNotebook: loadWrongNotebook(),
   history: loadHistory(),
   settings: loadSettings(),
+  isFirstVisit: !hasSavedSettings(),
   showExplanation: true,
   explainStore: {},
   explainLoadPromises: {}
@@ -328,6 +338,7 @@ const el = {
   wrongTimerLabel: document.getElementById("wrongTimerLabel"),
   typeTimerLabel: document.getElementById("typeTimerLabel"),
   settingsNote: document.getElementById("settingsNote"),
+  firstVisitGuide: document.getElementById("firstVisitGuide"),
   videoPendingNote: document.getElementById("videoPendingNote"),
   typeVideoPendingNote: document.getElementById("typeVideoPendingNote"),
 
@@ -416,6 +427,13 @@ function applyMenuLanguage() {
   el.typeTimerLabel.textContent = ui("typeTimerLabel");
   el.applySettingsBtn.textContent = ui("applySettings");
   el.settingsNote.textContent = ui("settingsNote");
+  if (state.isFirstVisit && el.firstVisitGuide) {
+    el.firstVisitGuide.classList.remove("hidden");
+    el.firstVisitGuide.textContent = ui("firstVisitGuide");
+  } else if (el.firstVisitGuide) {
+    el.firstVisitGuide.classList.add("hidden");
+    el.firstVisitGuide.textContent = "";
+  }
   if (el.videoPendingNote) el.videoPendingNote.textContent = ui("videoPendingNote");
   if (el.typeVideoPendingNote) el.typeVideoPendingNote.textContent = ui("typeVideoPendingNote");
 }
@@ -1132,6 +1150,10 @@ function applySettings() {
   if (prev.explainLang !== state.settings.explainLang) {
     ensureExplainLangLoaded(state.settings.explainLang);
   }
+  if (state.isFirstVisit) {
+    state.isFirstVisit = false;
+    showHome();
+  }
   track("apply_settings", {
     menu_lang: state.settings.menuLang,
     question_lang: state.settings.questionLang,
@@ -1195,4 +1217,9 @@ renderStats();
 ensureExplainLangLoaded(state.settings.explainLang);
 applyMenuLanguage();
 setNoActiveTestTimer();
-showHome();
+if (state.isFirstVisit) {
+  openSettings();
+  track("first_visit_prompt", { source: "init" });
+} else {
+  showHome();
+}

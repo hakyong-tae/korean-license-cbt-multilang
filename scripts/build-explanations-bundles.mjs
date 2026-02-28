@@ -28,7 +28,6 @@ for (const lang of Array.from(langs).sort()) {
   }
   const payload = {
     schemaVersion: "1.0.0",
-    generatedAt: new Date().toISOString(),
     language: lang,
     totalQuestions: db.questions.length,
     explainedQuestions: explainedCount,
