@@ -7045,8 +7045,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p037.jpg",
-      "alt": "Question source page 37"
+      "src": "./data/question_media/q0180.jpg",
+      "alt": "Question 180 image"
     }
   },
   {
@@ -14291,8 +14291,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p075.jpg",
-      "alt": "Question source page 75"
+      "src": "./data/question_media/q0365.jpg",
+      "alt": "Question 365 image"
     }
   },
   {
@@ -21982,8 +21982,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p115.jpg",
-      "alt": "Question source page 115"
+      "src": "./data/question_media/q0561.jpg",
+      "alt": "Question 561 image"
     }
   },
   {
@@ -26677,8 +26677,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p140.jpg",
-      "alt": "Question source page 140"
+      "src": "./data/question_media/q0681.jpg",
+      "alt": "Question 681 image"
     }
   },
   {
@@ -26725,8 +26725,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p140.jpg",
-      "alt": "Question source page 140"
+      "src": "./data/question_media/q0682.jpg",
+      "alt": "Question 682 image"
     }
   },
   {
@@ -26773,8 +26773,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p141.jpg",
-      "alt": "Question source page 141"
+      "src": "./data/question_media/q0683.jpg",
+      "alt": "Question 683 image"
     }
   },
   {
@@ -26821,8 +26821,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p141.jpg",
-      "alt": "Question source page 141"
+      "src": "./data/question_media/q0684.jpg",
+      "alt": "Question 684 image"
     }
   },
   {
@@ -26955,8 +26955,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p143.jpg",
-      "alt": "Question source page 143"
+      "src": "./data/question_media/q0687.jpg",
+      "alt": "Question 687 image"
     }
   },
   {
@@ -27003,8 +27003,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p143.jpg",
-      "alt": "Question source page 143"
+      "src": "./data/question_media/q0688.jpg",
+      "alt": "Question 688 image"
     }
   },
   {
@@ -27094,8 +27094,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p144.jpg",
-      "alt": "Question source page 144"
+      "src": "./data/question_media/q0690.jpg",
+      "alt": "Question 690 image"
     }
   },
   {
@@ -27185,8 +27185,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p145.jpg",
-      "alt": "Question source page 145"
+      "src": "./data/question_media/q0692.jpg",
+      "alt": "Question 692 image"
     }
   },
   {
@@ -27233,8 +27233,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p146.jpg",
-      "alt": "Question source page 146"
+      "src": "./data/question_media/q0693.jpg",
+      "alt": "Question 693 image"
     }
   },
   {
@@ -27324,8 +27324,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p147.jpg",
-      "alt": "Question source page 147"
+      "src": "./data/question_media/q0695.jpg",
+      "alt": "Question 695 image"
     }
   },
   {
@@ -27372,8 +27372,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p147.jpg",
-      "alt": "Question source page 147"
+      "src": "./data/question_media/q0696.jpg",
+      "alt": "Question 696 image"
     }
   },
   {
@@ -27420,8 +27420,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p148.jpg",
-      "alt": "Question source page 148"
+      "src": "./data/question_media/q0697.jpg",
+      "alt": "Question 697 image"
     }
   },
   {
@@ -27468,8 +27468,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p148.jpg",
-      "alt": "Question source page 148"
+      "src": "./data/question_media/q0698.jpg",
+      "alt": "Question 698 image"
     }
   },
   {
@@ -27516,8 +27516,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p149.jpg",
-      "alt": "Question source page 149"
+      "src": "./data/question_media/q0699.jpg",
+      "alt": "Question 699 image"
     }
   },
   {
@@ -27564,8 +27564,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p149.jpg",
-      "alt": "Question source page 149"
+      "src": "./data/question_media/q0700.jpg",
+      "alt": "Question 700 image"
     }
   },
   {
@@ -27612,8 +27612,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p150.jpg",
-      "alt": "Question source page 150"
+      "src": "./data/question_media/q0701.jpg",
+      "alt": "Question 701 image"
     }
   },
   {
@@ -27703,8 +27703,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p151.jpg",
-      "alt": "Question source page 151"
+      "src": "./data/question_media/q0703.jpg",
+      "alt": "Question 703 image"
     }
   },
   {
@@ -27794,8 +27794,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p152.jpg",
-      "alt": "Question source page 152"
+      "src": "./data/question_media/q0705.jpg",
+      "alt": "Question 705 image"
     }
   },
   {
@@ -27842,8 +27842,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p152.jpg",
-      "alt": "Question source page 152"
+      "src": "./data/question_media/q0706.jpg",
+      "alt": "Question 706 image"
     }
   },
   {
@@ -27890,8 +27890,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p153.jpg",
-      "alt": "Question source page 153"
+      "src": "./data/question_media/q0707.jpg",
+      "alt": "Question 707 image"
     }
   },
   {
@@ -27938,8 +27938,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p153.jpg",
-      "alt": "Question source page 153"
+      "src": "./data/question_media/q0708.jpg",
+      "alt": "Question 708 image"
     }
   },
   {
@@ -27986,8 +27986,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p154.jpg",
-      "alt": "Question source page 154"
+      "src": "./data/question_media/q0709.jpg",
+      "alt": "Question 709 image"
     }
   },
   {
@@ -28034,8 +28034,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p154.jpg",
-      "alt": "Question source page 154"
+      "src": "./data/question_media/q0710.jpg",
+      "alt": "Question 710 image"
     }
   },
   {
@@ -28082,8 +28082,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p155.jpg",
-      "alt": "Question source page 155"
+      "src": "./data/question_media/q0711.jpg",
+      "alt": "Question 711 image"
     }
   },
   {
@@ -28130,8 +28130,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p155.jpg",
-      "alt": "Question source page 155"
+      "src": "./data/question_media/q0712.jpg",
+      "alt": "Question 712 image"
     }
   },
   {
@@ -28178,8 +28178,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p156.jpg",
-      "alt": "Question source page 156"
+      "src": "./data/question_media/q0713.jpg",
+      "alt": "Question 713 image"
     }
   },
   {
@@ -28226,8 +28226,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p156.jpg",
-      "alt": "Question source page 156"
+      "src": "./data/question_media/q0714.jpg",
+      "alt": "Question 714 image"
     }
   },
   {
@@ -28274,8 +28274,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p157.jpg",
-      "alt": "Question source page 157"
+      "src": "./data/question_media/q0715.jpg",
+      "alt": "Question 715 image"
     }
   },
   {
@@ -28322,8 +28322,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p157.jpg",
-      "alt": "Question source page 157"
+      "src": "./data/question_media/q0716.jpg",
+      "alt": "Question 716 image"
     }
   },
   {
@@ -28370,8 +28370,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p158.jpg",
-      "alt": "Question source page 158"
+      "src": "./data/question_media/q0717.jpg",
+      "alt": "Question 717 image"
     }
   },
   {
@@ -28461,8 +28461,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p159.jpg",
-      "alt": "Question source page 159"
+      "src": "./data/question_media/q0719.jpg",
+      "alt": "Question 719 image"
     }
   },
   {
@@ -28509,8 +28509,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p159.jpg",
-      "alt": "Question source page 159"
+      "src": "./data/question_media/q0720.jpg",
+      "alt": "Question 720 image"
     }
   },
   {
@@ -28557,8 +28557,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p160.jpg",
-      "alt": "Question source page 160"
+      "src": "./data/question_media/q0721.jpg",
+      "alt": "Question 721 image"
     }
   },
   {
@@ -28605,8 +28605,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p160.jpg",
-      "alt": "Question source page 160"
+      "src": "./data/question_media/q0722.jpg",
+      "alt": "Question 722 image"
     }
   },
   {
@@ -28653,8 +28653,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p161.jpg",
-      "alt": "Question source page 161"
+      "src": "./data/question_media/q0723.jpg",
+      "alt": "Question 723 image"
     }
   },
   {
@@ -28701,8 +28701,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p161.jpg",
-      "alt": "Question source page 161"
+      "src": "./data/question_media/q0724.jpg",
+      "alt": "Question 724 image"
     }
   },
   {
@@ -28749,8 +28749,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p162.jpg",
-      "alt": "Question source page 162"
+      "src": "./data/question_media/q0725.jpg",
+      "alt": "Question 725 image"
     }
   },
   {
@@ -28797,8 +28797,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p162.jpg",
-      "alt": "Question source page 162"
+      "src": "./data/question_media/q0726.jpg",
+      "alt": "Question 726 image"
     }
   },
   {
@@ -28845,8 +28845,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p163.jpg",
-      "alt": "Question source page 163"
+      "src": "./data/question_media/q0727.jpg",
+      "alt": "Question 727 image"
     }
   },
   {
@@ -28893,8 +28893,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p163.jpg",
-      "alt": "Question source page 163"
+      "src": "./data/question_media/q0728.jpg",
+      "alt": "Question 728 image"
     }
   },
   {
@@ -28941,8 +28941,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p164.jpg",
-      "alt": "Question source page 164"
+      "src": "./data/question_media/q0729.jpg",
+      "alt": "Question 729 image"
     }
   },
   {
@@ -28989,8 +28989,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p164.jpg",
-      "alt": "Question source page 164"
+      "src": "./data/question_media/q0730.jpg",
+      "alt": "Question 730 image"
     }
   },
   {
@@ -29037,8 +29037,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p165.jpg",
-      "alt": "Question source page 165"
+      "src": "./data/question_media/q0731.jpg",
+      "alt": "Question 731 image"
     }
   },
   {
@@ -29128,8 +29128,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p166.jpg",
-      "alt": "Question source page 166"
+      "src": "./data/question_media/q0733.jpg",
+      "alt": "Question 733 image"
     }
   },
   {
@@ -29176,8 +29176,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p166.jpg",
-      "alt": "Question source page 166"
+      "src": "./data/question_media/q0734.jpg",
+      "alt": "Question 734 image"
     }
   },
   {
@@ -29224,8 +29224,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p167.jpg",
-      "alt": "Question source page 167"
+      "src": "./data/question_media/q0735.jpg",
+      "alt": "Question 735 image"
     }
   },
   {
@@ -29272,8 +29272,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p167.jpg",
-      "alt": "Question source page 167"
+      "src": "./data/question_media/q0736.jpg",
+      "alt": "Question 736 image"
     }
   },
   {
@@ -29320,8 +29320,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p168.jpg",
-      "alt": "Question source page 168"
+      "src": "./data/question_media/q0737.jpg",
+      "alt": "Question 737 image"
     }
   },
   {
@@ -29368,8 +29368,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p168.jpg",
-      "alt": "Question source page 168"
+      "src": "./data/question_media/q0738.jpg",
+      "alt": "Question 738 image"
     }
   },
   {
@@ -29416,8 +29416,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p169.jpg",
-      "alt": "Question source page 169"
+      "src": "./data/question_media/q0739.jpg",
+      "alt": "Question 739 image"
     }
   },
   {
@@ -29464,8 +29464,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p169.jpg",
-      "alt": "Question source page 169"
+      "src": "./data/question_media/q0740.jpg",
+      "alt": "Question 740 image"
     }
   },
   {
@@ -29512,8 +29512,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p170.jpg",
-      "alt": "Question source page 170"
+      "src": "./data/question_media/q0741.jpg",
+      "alt": "Question 741 image"
     }
   },
   {
@@ -29603,8 +29603,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p171.jpg",
-      "alt": "Question source page 171"
+      "src": "./data/question_media/q0743.jpg",
+      "alt": "Question 743 image"
     }
   },
   {
@@ -29651,8 +29651,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p171.jpg",
-      "alt": "Question source page 171"
+      "src": "./data/question_media/q0744.jpg",
+      "alt": "Question 744 image"
     }
   },
   {
@@ -29699,8 +29699,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p172.jpg",
-      "alt": "Question source page 172"
+      "src": "./data/question_media/q0745.jpg",
+      "alt": "Question 745 image"
     }
   },
   {
@@ -29747,8 +29747,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p172.jpg",
-      "alt": "Question source page 172"
+      "src": "./data/question_media/q0746.jpg",
+      "alt": "Question 746 image"
     }
   },
   {
@@ -29795,8 +29795,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p173.jpg",
-      "alt": "Question source page 173"
+      "src": "./data/question_media/q0747.jpg",
+      "alt": "Question 747 image"
     }
   },
   {
@@ -29843,8 +29843,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p173.jpg",
-      "alt": "Question source page 173"
+      "src": "./data/question_media/q0748.jpg",
+      "alt": "Question 748 image"
     }
   },
   {
@@ -29891,8 +29891,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p174.jpg",
-      "alt": "Question source page 174"
+      "src": "./data/question_media/q0749.jpg",
+      "alt": "Question 749 image"
     }
   },
   {
@@ -29939,8 +29939,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p174.jpg",
-      "alt": "Question source page 174"
+      "src": "./data/question_media/q0750.jpg",
+      "alt": "Question 750 image"
     }
   },
   {
@@ -30116,8 +30116,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p176.jpg",
-      "alt": "Question source page 176"
+      "src": "./data/question_media/q0754.jpg",
+      "alt": "Question 754 image"
     }
   },
   {
@@ -30164,8 +30164,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p177.jpg",
-      "alt": "Question source page 177"
+      "src": "./data/question_media/q0755.jpg",
+      "alt": "Question 755 image"
     }
   },
   {
@@ -30212,8 +30212,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p177.jpg",
-      "alt": "Question source page 177"
+      "src": "./data/question_media/q0756.jpg",
+      "alt": "Question 756 image"
     }
   },
   {
@@ -30346,8 +30346,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p179.jpg",
-      "alt": "Question source page 179"
+      "src": "./data/question_media/q0759.jpg",
+      "alt": "Question 759 image"
     }
   },
   {
@@ -30394,8 +30394,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p179.jpg",
-      "alt": "Question source page 179"
+      "src": "./data/question_media/q0760.jpg",
+      "alt": "Question 760 image"
     }
   },
   {
@@ -30442,8 +30442,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p180.jpg",
-      "alt": "Question source page 180"
+      "src": "./data/question_media/q0761.jpg",
+      "alt": "Question 761 image"
     }
   },
   {
@@ -30490,8 +30490,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p180.jpg",
-      "alt": "Question source page 180"
+      "src": "./data/question_media/q0762.jpg",
+      "alt": "Question 762 image"
     }
   },
   {
@@ -30538,8 +30538,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p181.jpg",
-      "alt": "Question source page 181"
+      "src": "./data/question_media/q0763.jpg",
+      "alt": "Question 763 image"
     }
   },
   {
@@ -30586,8 +30586,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p181.jpg",
-      "alt": "Question source page 181"
+      "src": "./data/question_media/q0764.jpg",
+      "alt": "Question 764 image"
     }
   },
   {
@@ -30634,8 +30634,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p182.jpg",
-      "alt": "Question source page 182"
+      "src": "./data/question_media/q0765.jpg",
+      "alt": "Question 765 image"
     }
   },
   {
@@ -30811,8 +30811,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p184.jpg",
-      "alt": "Question source page 184"
+      "src": "./data/question_media/q0769.jpg",
+      "alt": "Question 769 image"
     }
   },
   {
@@ -30859,8 +30859,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p184.jpg",
-      "alt": "Question source page 184"
+      "src": "./data/question_media/q0770.jpg",
+      "alt": "Question 770 image"
     }
   },
   {
@@ -30950,8 +30950,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p185.jpg",
-      "alt": "Question source page 185"
+      "src": "./data/question_media/q0772.jpg",
+      "alt": "Question 772 image"
     }
   },
   {
@@ -30998,8 +30998,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p186.jpg",
-      "alt": "Question source page 186"
+      "src": "./data/question_media/q0773.jpg",
+      "alt": "Question 773 image"
     }
   },
   {
@@ -31046,8 +31046,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p186.jpg",
-      "alt": "Question source page 186"
+      "src": "./data/question_media/q0774.jpg",
+      "alt": "Question 774 image"
     }
   },
   {
@@ -31094,8 +31094,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p187.jpg",
-      "alt": "Question source page 187"
+      "src": "./data/question_media/q0775.jpg",
+      "alt": "Question 775 image"
     }
   },
   {
@@ -31142,8 +31142,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p187.jpg",
-      "alt": "Question source page 187"
+      "src": "./data/question_media/q0776.jpg",
+      "alt": "Question 776 image"
     }
   },
   {
@@ -31190,8 +31190,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p188.jpg",
-      "alt": "Question source page 188"
+      "src": "./data/question_media/q0777.jpg",
+      "alt": "Question 777 image"
     }
   },
   {
@@ -31238,8 +31238,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p188.jpg",
-      "alt": "Question source page 188"
+      "src": "./data/question_media/q0778.jpg",
+      "alt": "Question 778 image"
     }
   },
   {
@@ -31286,8 +31286,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p189.jpg",
-      "alt": "Question source page 189"
+      "src": "./data/question_media/q0779.jpg",
+      "alt": "Question 779 image"
     }
   },
   {
@@ -31334,8 +31334,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p189.jpg",
-      "alt": "Question source page 189"
+      "src": "./data/question_media/q0780.jpg",
+      "alt": "Question 780 image"
     }
   },
   {
@@ -31511,8 +31511,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p191.jpg",
-      "alt": "Question source page 191"
+      "src": "./data/question_media/q0784.jpg",
+      "alt": "Question 784 image"
     }
   },
   {
@@ -31559,8 +31559,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p192.jpg",
-      "alt": "Question source page 192"
+      "src": "./data/question_media/q0785.jpg",
+      "alt": "Question 785 image"
     }
   },
   {
@@ -31607,8 +31607,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p192.jpg",
-      "alt": "Question source page 192"
+      "src": "./data/question_media/q0786.jpg",
+      "alt": "Question 786 image"
     }
   },
   {
@@ -31655,8 +31655,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p193.jpg",
-      "alt": "Question source page 193"
+      "src": "./data/question_media/q0787.jpg",
+      "alt": "Question 787 image"
     }
   },
   {
@@ -32735,8 +32735,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p205.jpg",
-      "alt": "Question source page 205"
+      "src": "./data/question_media/q0812.jpg",
+      "alt": "Question 812 image"
     }
   },
   {
@@ -35214,8 +35214,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p234.jpg",
-      "alt": "Question source page 234"
+      "src": "./data/question_media/q0870.jpg",
+      "alt": "Question 870 image"
     }
   },
   {
@@ -35726,8 +35726,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p238.jpg",
-      "alt": "Question source page 238"
+      "src": "./data/question_media/q0883.jpg",
+      "alt": "Question 883 image"
     }
   },
   {
@@ -35770,8 +35770,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p238.jpg",
-      "alt": "Question source page 238"
+      "src": "./data/question_media/q0884.jpg",
+      "alt": "Question 884 image"
     }
   },
   {
@@ -35970,8 +35970,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p240.jpg",
-      "alt": "Question source page 240"
+      "src": "./data/question_media/q0889.jpg",
+      "alt": "Question 889 image"
     }
   },
   {
@@ -36014,8 +36014,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p240.jpg",
-      "alt": "Question source page 240"
+      "src": "./data/question_media/q0890.jpg",
+      "alt": "Question 890 image"
     }
   },
   {
@@ -36214,8 +36214,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p242.jpg",
-      "alt": "Question source page 242"
+      "src": "./data/question_media/q0895.jpg",
+      "alt": "Question 895 image"
     }
   },
   {
@@ -36609,8 +36609,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p245.jpg",
-      "alt": "Question source page 245"
+      "src": "./data/question_media/q0905.jpg",
+      "alt": "Question 905 image"
     }
   },
   {
@@ -36731,8 +36731,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p246.jpg",
-      "alt": "Question source page 246"
+      "src": "./data/question_media/q0908.jpg",
+      "alt": "Question 908 image"
     }
   },
   {
@@ -36970,8 +36970,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p248.jpg",
-      "alt": "Question source page 248"
+      "src": "./data/question_media/q0914.jpg",
+      "alt": "Question 914 image"
     }
   },
   {
@@ -37170,8 +37170,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p250.jpg",
-      "alt": "Question source page 250"
+      "src": "./data/question_media/q0919.jpg",
+      "alt": "Question 919 image"
     }
   },
   {
@@ -37253,8 +37253,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p251.jpg",
-      "alt": "Question source page 251"
+      "src": "./data/question_media/q0921.jpg",
+      "alt": "Question 921 image"
     }
   },
   {
@@ -37375,8 +37375,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p252.jpg",
-      "alt": "Question source page 252"
+      "src": "./data/question_media/q0924.jpg",
+      "alt": "Question 924 image"
     }
   },
   {
@@ -37458,8 +37458,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p252.jpg",
-      "alt": "Question source page 252"
+      "src": "./data/question_media/q0926.jpg",
+      "alt": "Question 926 image"
     }
   },
   {
@@ -37619,8 +37619,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p254.jpg",
-      "alt": "Question source page 254"
+      "src": "./data/question_media/q0930.jpg",
+      "alt": "Question 930 image"
     }
   },
   {
@@ -37702,8 +37702,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p254.jpg",
-      "alt": "Question source page 254"
+      "src": "./data/question_media/q0932.jpg",
+      "alt": "Question 932 image"
     }
   },
   {
@@ -37746,8 +37746,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p255.jpg",
-      "alt": "Question source page 255"
+      "src": "./data/question_media/q0933.jpg",
+      "alt": "Question 933 image"
     }
   },
   {
@@ -37790,8 +37790,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p255.jpg",
-      "alt": "Question source page 255"
+      "src": "./data/question_media/q0934.jpg",
+      "alt": "Question 934 image"
     }
   },
   {
@@ -37912,8 +37912,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p256.jpg",
-      "alt": "Question source page 256"
+      "src": "./data/question_media/q0937.jpg",
+      "alt": "Question 937 image"
     }
   },
   {
@@ -37956,8 +37956,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p256.jpg",
-      "alt": "Question source page 256"
+      "src": "./data/question_media/q0938.jpg",
+      "alt": "Question 938 image"
     }
   },
   {
@@ -38039,8 +38039,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p257.jpg",
-      "alt": "Question source page 257"
+      "src": "./data/question_media/q0940.jpg",
+      "alt": "Question 940 image"
     }
   },
   {
@@ -38083,8 +38083,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p257.jpg",
-      "alt": "Question source page 257"
+      "src": "./data/question_media/q0941.jpg",
+      "alt": "Question 941 image"
     }
   },
   {
@@ -38127,8 +38127,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p258.jpg",
-      "alt": "Question source page 258"
+      "src": "./data/question_media/q0942.jpg",
+      "alt": "Question 942 image"
     }
   },
   {
@@ -38171,8 +38171,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p258.jpg",
-      "alt": "Question source page 258"
+      "src": "./data/question_media/q0943.jpg",
+      "alt": "Question 943 image"
     }
   },
   {
@@ -38215,8 +38215,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p258.jpg",
-      "alt": "Question source page 258"
+      "src": "./data/question_media/q0944.jpg",
+      "alt": "Question 944 image"
     }
   },
   {
@@ -38259,8 +38259,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p259.jpg",
-      "alt": "Question source page 259"
+      "src": "./data/question_media/q0945.jpg",
+      "alt": "Question 945 image"
     }
   },
   {
@@ -38303,8 +38303,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p259.jpg",
-      "alt": "Question source page 259"
+      "src": "./data/question_media/q0946.jpg",
+      "alt": "Question 946 image"
     }
   },
   {
@@ -38386,8 +38386,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p260.jpg",
-      "alt": "Question source page 260"
+      "src": "./data/question_media/q0948.jpg",
+      "alt": "Question 948 image"
     }
   },
   {
@@ -38430,8 +38430,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p260.jpg",
-      "alt": "Question source page 260"
+      "src": "./data/question_media/q0949.jpg",
+      "alt": "Question 949 image"
     }
   },
   {
@@ -38474,8 +38474,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p260.jpg",
-      "alt": "Question source page 260"
+      "src": "./data/question_media/q0950.jpg",
+      "alt": "Question 950 image"
     }
   },
   {
@@ -38557,8 +38557,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p261.jpg",
-      "alt": "Question source page 261"
+      "src": "./data/question_media/q0952.jpg",
+      "alt": "Question 952 image"
     }
   },
   {
@@ -38679,8 +38679,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p262.jpg",
-      "alt": "Question source page 262"
+      "src": "./data/question_media/q0955.jpg",
+      "alt": "Question 955 image"
     }
   },
   {
@@ -38801,8 +38801,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p263.jpg",
-      "alt": "Question source page 263"
+      "src": "./data/question_media/q0958.jpg",
+      "alt": "Question 958 image"
     }
   },
   {
@@ -38845,8 +38845,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p263.jpg",
-      "alt": "Question source page 263"
+      "src": "./data/question_media/q0959.jpg",
+      "alt": "Question 959 image"
     }
   },
   {
@@ -39006,8 +39006,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p265.jpg",
-      "alt": "Question source page 265"
+      "src": "./data/question_media/q0963.jpg",
+      "alt": "Question 963 image"
     }
   },
   {
@@ -39050,8 +39050,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p265.jpg",
-      "alt": "Question source page 265"
+      "src": "./data/question_media/q0964.jpg",
+      "alt": "Question 964 image"
     }
   },
   {
@@ -39094,8 +39094,8 @@ window.CBT_QUESTIONS = [
     },
     "media": {
       "type": "image",
-      "src": "./data/page_media/p265.jpg",
-      "alt": "Question source page 265"
+      "src": "./data/question_media/q0965.jpg",
+      "alt": "Question 965 image"
     }
   },
   {
