@@ -31,16 +31,21 @@
 - Migrated dataset:
   - `/data/questions.v1.json`
   - total: 1000 questions (English bank extraction)
-  - extraction source PDF: `/data/question-bank-en.pdf`
+  - extraction source PDF: external source URL (not tracked in git)
 - Runtime loader file:
   - `/questions.js` (generated from `questions.v1.json`)
 
-## Next step (for 1000-question rollout)
-1. If PDF is updated, regenerate DB:
+## Source PDF (official link)
+- `http://www.g-car.kr/wp-content/uploads/2025/04/12%EC%A2%85%EB%B3%B4%ED%86%B5-%ED%95%99%EA%B3%BC%EC%8B%9C%ED%97%98-%EB%AC%B8%EC%A0%9C%EC%9D%80%ED%96%89English_2025.2.24-%EC%8B%9C%ED%96%89.pdf`
+
+## Refresh workflow (PDF -> JSON -> runtime JS)
+1. Download latest source PDF locally:
+   - `curl -L "http://www.g-car.kr/wp-content/uploads/2025/04/12%EC%A2%85%EB%B3%B4%ED%86%B5-%ED%95%99%EA%B3%BC%EC%8B%9C%ED%97%98-%EB%AC%B8%EC%A0%9C%EC%9D%80%ED%96%89English_2025.2.24-%EC%8B%9C%ED%96%89.pdf" -o /Users/hytae/Downloads/verse8-driving-cbt/data/question-bank-en.pdf`
+2. Regenerate DB JSON:
    - `node /Users/hytae/Downloads/verse8-driving-cbt/scripts/extract-pdf-bank.mjs`
-2. Regenerate runtime JS:
+3. Regenerate runtime JS:
    - `node /Users/hytae/Downloads/verse8-driving-cbt/scripts/build-questions-js.mjs`
-3. Deploy static build.
+4. Commit updated `data/questions.v1.json` and `questions.js` only.
 
 ## Run
 Open `index.html` in a browser.
