@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ko-drive.netlify.app/sitemap.xml
+Sitemap: https://hakyong-tae.github.io/korean-license-cbt-multilang/sitemap.xml

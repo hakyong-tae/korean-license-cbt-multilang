@@ -41,4 +41,6 @@ for (const rel of dirsToCopy) {
   fs.cpSync(src, dst, { recursive: true });
 }
 
+fs.writeFileSync(path.join(outDir, ".nojekyll"), "");
+
 console.log(`Built deploy folder: ${outDir}`);

@@ -50,6 +50,12 @@
 ## Run
 Open `index.html` in a browser.
 
+## GitHub Pages Deploy
+- Workflow file: `/.github/workflows/pages.yml`
+- Deploy URL target: `https://hakyong-tae.github.io/korean-license-cbt-multilang/`
+- In GitHub repo settings:
+  - `Settings -> Pages -> Build and deployment -> Source = GitHub Actions`
+
 ## Analytics (GA4)
 - File: `/index.html`
 - Find `window.KD_ANALYTICS_CONFIG` and replace:
