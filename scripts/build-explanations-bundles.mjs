@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const root = "/Users/hytae/Downloads/verse8-driving-cbt";
+const root = process.cwd();
 const srcPath = path.join(root, "data", "questions.v1.json");
 const outDir = path.join(root, "data", "explanations");
 
